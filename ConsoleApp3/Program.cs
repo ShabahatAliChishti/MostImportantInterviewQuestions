@@ -63,7 +63,13 @@ namespace ConsoleApp3
             //Console.WriteLine("Product= " + num1);
 
             //Repeated Characters
-            RepeatedCharsString();
+            //RepeatedCharsString();
+
+
+
+            isEvenOrOdd(14342);
+
+            //isEvenOrOddByConversion(14342);
         }
         static string str = "proffession";
         static int n = str.Length;
@@ -84,6 +90,28 @@ namespace ConsoleApp3
             }
             Console.WriteLine("Repeated chars are: " + dupstr);
             Console.WriteLine("No of repeated chars are: " + cnt);
+        }
+        public static void isEvenOrOddByConversion(int number)
+        {
+            string convertNumber = number.ToString();
+            int convertnumberlength = convertNumber.Length;
+            char index = convertNumber[convertnumberlength-1];
+            Console.WriteLine(index);
+        }
+
+        public static void isEvenOrOdd(int number)
+        {
+            int quotient = number / 2;
+
+            if (quotient * 2 == number)
+            {
+                Console.WriteLine ("Using division operator: " + number + " is Even number");
+
+            }
+            else
+            {
+                Console.WriteLine ("Using division operator: " + number + " is Odd number");
+            }
         }
         public static int ConversionFunction(string value)
         {
