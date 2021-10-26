@@ -77,8 +77,9 @@ namespace ConsoleApp3
             //Console.Write("Enter any Number: ");
             //int number = Convert.ToInt32(Console.ReadLine());
             //factorialnumber(number);
-            string[] array = { "first", "second", "third", "fourth", "first","second" };
-            CheckforDuplicates(array);
+            //string[] array = { "first", "second", "third", "fourth", "first","second" };
+            //CheckforDuplicates(array);
+            fabonacciseries();
 
         }
         static string str = "proffession";
@@ -113,6 +114,26 @@ namespace ConsoleApp3
             }
 
 
+        }
+
+       public static void fabonacciseries()
+        {
+            int Length, firstNum = 0, secondNum = 1, result, i;
+            Console.Write("Enter the number of terms : ");
+            Length = Int32.Parse(Console.ReadLine());
+            for (i = 0; i < Length; i++)
+            {
+                if (i <= 1)
+                    result = i;
+                else
+                {
+                    result = firstNum + secondNum;
+                    firstNum = secondNum;
+                    secondNum = result;
+                }
+                Console.Write(result + "  ");
+            }
+            Console.ReadKey();
         }
 
         public static void factorialnumber(int number)
