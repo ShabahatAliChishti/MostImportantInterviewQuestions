@@ -6,10 +6,13 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp3
 {
+ 
+
     class Program
     {
         static void Main(string[] args)
         {
+
             //printnumberswithoutloop(1, 100);
             //int[] arr=sortarray();
             //for reversing array
@@ -67,9 +70,16 @@ namespace ConsoleApp3
 
 
 
-            isEvenOrOdd(14342);
+            //isEvenOrOdd(14342);
 
             //isEvenOrOddByConversion(14342);
+
+            //Console.Write("Enter any Number: ");
+            //int number = Convert.ToInt32(Console.ReadLine());
+            //factorialnumber(number);
+            string[] array = { "first", "second", "third", "fourth", "first","second" };
+            CheckforDuplicates(array);
+
         }
         static string str = "proffession";
         static int n = str.Length;
@@ -90,6 +100,30 @@ namespace ConsoleApp3
             }
             Console.WriteLine("Repeated chars are: " + dupstr);
             Console.WriteLine("No of repeated chars are: " + cnt);
+        }
+        public static void CheckforDuplicates(string[] lst)
+        {
+            var query = lst.GroupBy(x => x)
+                  .Where(g => g.Count() > 1)
+                  .Select(y => y.Key)
+                  .ToList();
+            foreach(var v in query)
+            {
+                Console.WriteLine(v);
+            }
+
+
+        }
+
+        public static void factorialnumber(int number)
+        {
+            int fact = 1;
+
+            for (int i = 1; i <= number; i++)//i=1,number=4 i=2,number=4
+            {
+                fact = fact * i;//fact=1*1,2*1,
+            }
+            Console.WriteLine("Factorial of " + number + " is: " + fact);
         }
         public static void isEvenOrOddByConversion(int number)
         {
