@@ -79,7 +79,9 @@ namespace ConsoleApp3
             //factorialnumber(number);
             //string[] array = { "first", "second", "third", "fourth", "first","second" };
             //CheckforDuplicates(array);
-            fabonacciseries();
+            //fabonacciseries();
+            uniquecharactersprint();
+            Console.ReadKey();
 
         }
         static string str = "proffession";
@@ -102,6 +104,50 @@ namespace ConsoleApp3
             Console.WriteLine("Repeated chars are: " + dupstr);
             Console.WriteLine("No of repeated chars are: " + cnt);
         }
+        public static void uniquecharactersprint()
+        {
+            string[] str = {"a", "aaaa", "bbbb", "b", "c", "cccc", "cc"};
+
+            //Display the list
+            for (int i = 0; i <= str.Length-1; i++)
+            {
+                char[] charVaue = str[i].ToCharArray();
+                if (charVaue.Length == 1)
+                {
+                    Console.WriteLine(str[i]);
+                }
+                   
+            
+            }
+
+
+        }
+        public static void uniquecharactersprintagaypece()
+        {
+            string[] str = { "a", "abba", "bbba", "b", "c", "cccc", "cc" };
+
+            //Display the list
+            for (int i = 0; i <= str.Length - 1; i++)
+            {
+                char[] charVaue = str[i].ToCharArray();
+                for (int x = 0; x <= charVaue.Length - 1; x++)
+                {
+                    if (charVaue.Length == 1)
+                    {
+                        Console.WriteLine(charVaue[x]);
+                    }
+                }
+
+
+
+            }
+
+
+        
+
+
+    }
+
         public static void CheckforDuplicates(string[] lst)
         {
             var query = lst.GroupBy(x => x)
